@@ -24,7 +24,7 @@ This function should write the specified byte to the specified I/O port.
 
 There are no requirements placed on this object except that those four functions exist, and there are no other parameters required from you in order to set up the emulator.
 
-The constructor will return an object containing the following three functions, which are the entire public interface to the Z80:
+The constructor will return an object containing the following functions, which are the entire public interface to the Z80:
 
     reset()
 
