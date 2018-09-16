@@ -343,8 +343,8 @@ let interrupt = function(non_maskable, data)
          //  but it doesn't appear that this is actually the case on the hardware,
          //  so we don't attempt to enforce that here.
          var vector_address = ((i << 8) | data);
-         pc = core.read_mem_byte(vector_address) | 
-                   (core.read_mem_byte((vector_address + 1) & 0xffff) << 8);
+         pc = core.mem_read(vector_address) | 
+                   (core.mem_read((vector_address + 1) & 0xffff) << 8);
          
          cycle_counter += 19;
       }
