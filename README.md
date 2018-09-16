@@ -38,6 +38,14 @@ Runs the instruction the program counter is currently pointing at, and advances 
 
 Triggers an interrupt. non_maskable should be true if the interrupt is a non-maskable interrupt (surprising, I know), and data should contain the value being placed on the data bus, if any (not needed if only NMI's or interrupt mode 1 are being used).
 
+    getState()
+
+Returns an object representing the internal state of the Z80. This can be used as part of an emulator state save routine, a debugger, or anything else that needs to see what's up inside the CPU. The properties of the state object are pretty self-explanatory if you're familiar with the Z80 architecture.
+
+    setState(state)
+
+Replaces the entire internal state of the Z80 with the given state object, in the format returned by getState.
+
 And that's all you need to know about how to use the emulator. Feel free to contact me with any questions.
 
 Known Issues
