@@ -2329,8 +2329,8 @@ ed_instructions[0x56] = function()
 ed_instructions[0x57] = function()
 {
    a = i;
-   flags.S = i 
-   flags.Z = i ? 1 : 0;
+   flags.S = i & 0x80 ? 1 : 0;
+   flags.Z = i ? 0 : 1;
    flags.H = 0;
    flags.P = iff2;
    flags.N = 0;
