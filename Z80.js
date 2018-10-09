@@ -2329,7 +2329,11 @@ ed_instructions[0x56] = function()
 ed_instructions[0x57] = function()
 {
    a = i;
+   flags.S = i 
+   flags.Z = i ? 1 : 0;
+   flags.H = 0;
    flags.P = iff2;
+   flags.N = 0;
 };
 // 0x58 : IN E, (C)
 ed_instructions[0x58] = function()
