@@ -378,8 +378,6 @@ let decode_instruction = function(opcode)
    if (opcode === 0x76)
    {
       halted = true;
-      iff1 = 1;
-      iff2 = 1;
    }
    else if ((opcode >= 0x40) && (opcode < 0x80))
    {
