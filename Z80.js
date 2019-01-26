@@ -2327,11 +2327,12 @@ ed_instructions[0x56] = function()
 ed_instructions[0x57] = function()
 {
    a = i;
-   flags.S = i & 0x80 ? 1 : 0;
-   flags.Z = i ? 0 : 1;
+   flags.S = a & 0x80 ? 1 : 0;
+   flags.Z = a ? 0 : 1;
    flags.H = 0;
    flags.P = iff2;
    flags.N = 0;
+   update_xy_flags(a);
 };
 // 0x58 : IN E, (C)
 ed_instructions[0x58] = function()
@@ -2379,7 +2380,12 @@ ed_instructions[0x5e] = function()
 ed_instructions[0x5f] = function()
 {
    a = r;
+   flags.S = a & 0x80 ? 1 : 0;
+   flags.Z = a ? 0 : 1;
+   flags.H = 0;
    flags.P = iff2;
+   flags.N = 0;
+   update_xy_flags(a);
 };
 // 0x60 : IN H, (C)
 ed_instructions[0x60] = function()
