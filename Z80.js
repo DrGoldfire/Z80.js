@@ -324,7 +324,11 @@ let interrupt = function(non_maskable, data)
       {
          // In the 8080-compatible interrupt mode,
          //  decode the content of the data bus as an instruction and run it.
+         // it's probably a RST instruction, which pushes (PC+1) onto the stack
+         // so we should decrement PC before we decode the instruction
+         pc = (pc - 1) & 0xffff;
          decode_instruction(data);
+         pc = (pc + 1) & 0xffff; // increment PC upon return
          cycle_counter += 2;
       }
       else if (imode === 1)
