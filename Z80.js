@@ -3,7 +3,7 @@
 ///
 /// @brief Emulator for the Zilog Z80 microprocessor
 ///
-/// @author Matthew Howell
+/// @author Molly Howell
 ///
 /// @remarks
 ///  This module is a simple, straightforward instruction interpreter.
@@ -17,7 +17,7 @@
 ///  http://www.myquest.nl/z80undocumented/z80-documented-v0.91.pdf
 ///   - The Undocumented Z80, Documented
 ///
-/// @copyright (c) 2013 Matthew Howell
+/// @copyright (c) Molly Howell
 ///  This code is released under the MIT license,
 ///  a copy of which is available in the associated README.md file,
 ///  or at http://opensource.org/licenses/MIT

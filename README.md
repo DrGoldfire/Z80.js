@@ -58,4 +58,4 @@ Those are the only problems I'm aware of; let me know if you find any others.
 
 License
 =======
-This code is copyright 2013 Matthew J. Howell and is made available under the MIT license. The text of the MIT license can be found in the LICENSE.md file in this repository.
+This code is copyright Molly Howell and contributors and is made available under the MIT license. The text of the MIT license can be found in the LICENSE.md file in this repository.
