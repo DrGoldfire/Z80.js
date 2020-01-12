@@ -30,6 +30,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 function Z80(coreParameter)
 {
+   // Obviously we'll be needing the core object's functions again.
+   let core = coreParameter;
+
    // The argument to this constructor should be an object containing 4 functions:
    // mem_read(address) should return the byte at the given memory address,
    // mem_write(address, value) should write the given value to the given memory address,
@@ -43,9 +46,6 @@ function Z80(coreParameter)
    if (this === window)
       throw("Z80: This function is a constructor; call it using operator new.");
 
-      // Obviously we'll be needing the core object's functions again.
-   let core = coreParameter;
-   
    // All right, let's initialize the registers.
    // First, the standard 8080 registers.
    let a = 0x00;
